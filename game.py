@@ -25,27 +25,26 @@ class Player():
             self.age = age
 
 if __name__ == "__main__":
-    while True:
-        #ADD CAPTION
-        print("[You wake up and cover your barely opened eyes from the bright light in your face].")
-        time.sleep(2)
-        print("[As you're confused about your current situation, you hear a door behind you open.]")
-        time.sleep(2)
-        print("[As you try to stand up to look behind, you realized you're currently handcuffed to the table.]")
-        time.sleep(4)
-        print("[A man enters the room and sits down in the chair infront of you.]")
-        time.sleep(3)
-        print("What's your name?\n")
-        name = input()
+    #ADD CAPTION
+    print("[You wake up and cover your barely opened eyes from the bright light in your face].")
+    time.sleep(2)
+    print("[As you're confused about your current situation, you hear a door behind you open.]")
+    time.sleep(2)
+    print("[As you try to stand up to look behind, you realized you're currently handcuffed to the table.]")
+    time.sleep(4)
+    print("[A man enters the room and sits down in the chair infront of you.]")
+    time.sleep(3)
+    print("What's your name?\n")
+    name = input()
 
 
-        print("[You see the man pull out a notebook and write in it.]")
-        time.sleep(5)
-        print("What's your age?\n")
-        age = input()
+    print("[You see the man pull out a notebook and write in it.]")
+    time.sleep(5)
+    print("What's your age?\n")
+    age = input()
 
 
-        print(" ")
-        time.sleep(3)
+    print(" ")
+    time.sleep(3)
 
-        #aggressiveness reaches ten, beats you up till your almost done security comes and he walks out and tells them to take you away
+    #aggressiveness reaches ten, beats you up till your almost done security comes and he walks out and tells them to take you away
