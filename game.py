@@ -3,7 +3,7 @@ import time
 
 class MainCharacter():
     def __init__(self):
-            self.items = possessed_items
+        self.items = possessed_items
 
 #def Scenario1Main():
     print()
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         time.sleep(6)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Finally I caught you, you bastard. You thought you could escape me, now that she's gone, all that's left is to get rid of you now and I'll be the only successor.' A strange young man said as he laughed loudly")
+        print("'Finally I caught you, you bastard. You thought you could escape me, now that she's gone, all that's left is to get rid of you now and I'll be the only successor.' A strange young man said as he laughed madly")
         time.sleep(7)
         print(".\n.\n.")
         time.sleep(1)
