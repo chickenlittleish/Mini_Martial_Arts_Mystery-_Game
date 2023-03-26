@@ -6,24 +6,27 @@ class MainCharacter():
             self.items = possessed_items
 
 #def Scenario1Main():
-    #fr
+    print()
 def Scenario1Alternative():
     print("[You search your clothes and body for a book or anything that can tell you about your past]")
+    time.sleep(5)
     print("[You thought your search was useless until you put your hand in your pockets and found something]")
+    time.sleep(5)
     print("[You managed to find a pendant with a jade butterfly attached to it.]")
+    time.sleep(5)
     possessed_items.append("jade butterfly pendant")
     print("[Where else would you like to search?]")
-    print("[Choices:\n 1)ned]")
+    print("[Choices:\n][1)bed]")
     #search_choice2_stoneprisoncell = input()
     #if search_choice2_stoneprisoncell.lower() == "bed":
-        # Scenario1Main()
+        #Scenario1Main()
 if __name__ == "__main__":
     while True:
         print("'You must live no matter what, ∆µœåøŒ◊, as the successor of the--' A strange woman said as she bled out")
         time.sleep(3)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Keep up young master, we've almost escaped from them, soon, we should be able to leave the territory.' The old man you were walking with said.")
+        print("'Keep up young master, we've almost escaped from them, soon, we should be able to leave his domain.' The old man you were walking with said.")
         time.sleep(3)
         print(".\n.\n.")
         time.sleep(1)
@@ -31,15 +34,15 @@ if __name__ == "__main__":
         time.sleep(5)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Go! You must escape no matter what! So Go! Go!' He yelled as he stayed back to fight against the pursuers and you ran past him")
+        print("'Go! You must escape no matter what! Go! Go!' He yelled as he stayed back to fight against the pursuers and you ran past him.")
         time.sleep(6)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Finally I caught you, you bastard. You thought you could escape me, now that she's gone, all that's left is to get rid of you now and I'll be the victor.' A strange young man said as he laughed loudly")
+        print("'Finally I caught you, you bastard. You thought you could escape me, now that she's gone, all that's left is to get rid of you now and I'll be the only successor.' A strange young man said as he laughed loudly")
         time.sleep(7)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Han Jue, tell that bastard Song Xū that we shall keep our part of the deal and send this bastard to him.' He said to one of the many men at the side.")
+        print("'Han Jue, abolish this guys cultivation and leave him somewhere on the streets to die like the rat he is.' He said to one of the guards.")
         time.sleep(8)
         print(".\n.\n.")
         time.sleep(1)
@@ -58,7 +61,7 @@ if __name__ == "__main__":
         print("(That wasn't just a dream, that felt too real to be a dream. That book must be here somewhere, it's the only link to my past.)")
         time.sleep(8)
         print("[Where are you going to search for the book?]")
-        print("[Choices:\n 1)bed\n 2)yourself]")
+        print("[Choices:]\n[1)bed]\n[2)yourself]")
         search_choice1_stoneprisoncell = input()
         mc = MainCharacter()
         possessed_items = []
