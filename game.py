@@ -16,7 +16,7 @@ def Scenario1Alternative():
     time.sleep(5)
     possessed_items.append("jade butterfly pendant")
     print("[Where else would you like to search?]")
-    print("[Choices:\n][1)bed]")
+    print("[Choices:]\n[1)bed]")
     #search_choice2_stoneprisoncell = input()
     #if search_choice2_stoneprisoncell.lower() == "bed":
         #Scenario1Main()
@@ -63,8 +63,8 @@ if __name__ == "__main__":
         print("[Where are you going to search for the book?]")
         print("[Choices:]\n[1)bed]\n[2)yourself]")
         search_choice1_stoneprisoncell = input()
-        mc = MainCharacter()
         possessed_items = []
+        mc = MainCharacter()
         #if search_choice1_stoneprisoncell.lower() == "bed":
             #Scenario1Main()
         if search_choice1_stoneprisoncell.lower() == "yourself":
