@@ -4,10 +4,88 @@ import time
 class MainCharacter():
     def __init__(self):
         self.items = possessed_items
+        self.health = 100
+        self.strength = 6
+        self.dexterity = 8
+        self.stealth = 4
+        self.cultivation_realm = None
+        self.cultivation_realm_level = 0
 
-#def Scenario1Main():
-    print()
-def Scenario1Alternative():
+def Choice_Something_Else():
+    print("[What would you like to do?]")
+    print("[Choices:]\n[1)look outside my cell]")
+    story_choice_starter = input()
+    if story_choice_starter.lower() == "look outside my cell":
+        MainStory1()
+    else:
+        print("please choose from the choices provided")
+        print("[Choices:]\n[1)look outside my cell]")
+        story_choice_starter = input()
+
+def ScenarioPrep1():
+    print("[You decide to head over to your bed and search it]")
+    time.sleep(2)
+    print("[You searched throughout the whole bed and managed to find nothing.]")
+    time.sleep(2)
+    print("[Would you like to search the bed again or do something else?]")
+    print("[Choices:]\n[1)bed]\n[2)something else]")
+    search_choice3_stoneprisoncell = input()
+    if search_choice3_stoneprisoncell.lower() == "bed":
+        print("[You search through the bed again but still find nothing.]")
+        time.sleep(3)
+        print("[Would you like to search the bed again or do something else?]")
+        print("[Choices:]\n[1)bed again]\n[2)something else]")
+        search_choice4_stoneprisoncell = input()
+        if search_choice4_stoneprisoncell.lower() == "something else":
+            Choice_Something_Else()
+        if search_choice4_stoneprisoncell.lower() == "bed again":
+            print("[This time you decide to search the bottom of the bed but unfortunetly still didn't manage to find anything]")
+            time.sleep(4)
+            print("[Would you like to search the bed again or do something else?]")
+            print("[Choices:]\n[1)bed one more time]\n[2)something else]")
+            search_choice5_stoneprisoncell = input()
+            if search_choice5_stoneprisoncell.lower() == "bed one more time":
+                print("[This time, you decide to stick your hand underneath the bed to feel around for something.]")
+                time.sleep(4)
+                print("[As you stick your hand further under the bed and move it around, you fortunately managed to feel a wooden box near the corner]")
+                time.sleep(6)
+                print("[You pull the box out and open it to see what's inside.]")
+                time.sleep(2)
+                print("[Inside you manage to find a book that seems like a martial arts manual and as you look aat the cover, it says:]")
+                time.sleep(3)
+                print("['Universal Harmonic Technique']")
+                possessed_items.append("universal harmonic martial arts manual")
+                print("[Now what would you like to do]")
+                print("[Choices:]\n[1)learn the cultivation manual(learn)]\n[2)something else]")
+                major_decision1 = input()
+                if major_decision1.lower() == "learn":
+                    print("[You open the manual and read the lines:]")
+                    time.sleep(1)
+                    print("'I am all but all is I, everywhere but nowhere, I am the 5 elements as they are me, and through their balance, Yin and Yang become balanced and I become the universe as it becomes one with me. For I am all and all is me.' You chant the chant on the first page of the manual with your eyes closed, focusing on it.")
+                    time.sleep(8)
+                    print("[When you finish reading the chant and open your eyes, you feel full of life, as if you are overflowing with strength and vitality, as if the universe's energy is flowing into you.]")
+                    time.sleep(5)
+                    mc.health = mc.health + 10
+                    mc.strength = mc.strength + 5
+                    mc.dexterity = mc.dexterity + 6
+                    mc.stealth = mc.stealth + 11
+                    mc.cultivation_realm = mc.cultivation_realm + 1
+                    mc.cultivation_realm_level = "Qi Qathering Realm"
+                    print("[Current Stats]:")
+                    print("[Vitality: " (mc.health))
+                    print("[Strength: " (mc.strength))
+                    print("[Dexterity: " (mc.dexterity))
+                    print("[Stealth: " (mc.stealth))
+                    print("[Cultivation Realm: " (mc.cultivation_realm) "(you are in the first realm of cultivation: Qi Gathering)")
+                    print("[Cultivation Realm(Level): " (mc.cultivation_realm_level) "(you are in the first level of the Qi Gathering Realm)")
+                if major_decision1.lower() == "something else":
+                    Choice_Something_Else()
+        if search_choice5_stoneprisoncell.lower() == "something else":
+            Choice_Something_Else()
+    if search_choice3_stoneprisoncell.lower() == "something else":
+        Choice_Something_Else()
+
+def ScenarioPrep1_1():
     print("[You search your clothes and body for a book or anything that can tell you about your past]")
     time.sleep(5)
     print("[You thought your search was useless until you put your hand in your pockets and found something]")
@@ -15,11 +93,13 @@ def Scenario1Alternative():
     print("[You managed to find a pendant with a jade butterfly attached to it.]")
     time.sleep(5)
     possessed_items.append("jade butterfly pendant")
-    print("[Where else would you like to search?]")
-    print("[Choices:]\n[1)bed]")
-    #search_choice2_stoneprisoncell = input()
-    #if search_choice2_stoneprisoncell.lower() == "bed":
-        #Scenario1Main()
+    print("[Would you like to search the bed or do something else?]")
+    print("[Choices:]\n[1)bed]\n[2)something else]")
+    search_choice2_stoneprisoncell = input()
+    if search_choice2_stoneprisoncell.lower() == "bed":
+        ScenarioPrep1()
+    if search_choice2_stoneprisoncell.lower() == "something else":
+        Choice_Something_Else()
 if __name__ == "__main__":
     while True:
         print("'You must live no matter what, ∆µœåøŒ◊, as the successor of the--' A strange woman said as she bled out")
@@ -42,7 +122,7 @@ if __name__ == "__main__":
         time.sleep(7)
         print(".\n.\n.")
         time.sleep(1)
-        print("'Han Jue, abolish this guys cultivation and leave him somewhere on the streets to die like the rat he is.' He said to one of the guards.")
+        print("'Han Jue, erase this guy's memory and send him to Song Rye, till him we're keeping our part of the deal.' He said to one of the guards.")
         time.sleep(8)
         print(".\n.\n.")
         time.sleep(1)
@@ -65,7 +145,7 @@ if __name__ == "__main__":
         search_choice1_stoneprisoncell = input()
         possessed_items = []
         mc = MainCharacter()
-        #if search_choice1_stoneprisoncell.lower() == "bed":
-            #Scenario1Main()
+        if search_choice1_stoneprisoncell.lower() == "bed":
+            ScenarioPrep1()
         if search_choice1_stoneprisoncell.lower() == "yourself":
-            Scenario1Alternative()
+            ScenarioPrep1_1()
