@@ -15,20 +15,22 @@ class MainCharacter():
 def MainStory1():
     print("[You decide to stick your head outside of your cell and look around.]")
     time.sleep(3)
-    print("Still in Progress.")
+    print("A wild Russian Bear appears and bites your head off")
+    print("Death")
+    time.sleep(4)
 
 def Choice_Something_Else():
     print("[What would you like to do?]")
     print("[Choices:]\n[1)look outside my cell]")
     story_choice_starter = input()
-    if story_choice_starter.lower() == "look outside my cell" or "1":
+    if story_choice_starter.lower() in ["look outside the cell","1"]:
         MainStory1()
     else:
         print("please choose from the choices provided")
         print("[Choices:]\n[1)look outside my cell]")
         story_choice_starter = input()
 
-#def ScenarioPrep1():
+def ScenarioPrep1():
     print("[You decide to head over to your bed and search it]")
     time.sleep(2)
     print("[You searched throughout the whole bed and managed to find nothing.]")
@@ -36,21 +38,21 @@ def Choice_Something_Else():
     print("[Would you like to search the bed again or do something else?]")
     print("[Choices:]\n[1)bed]\n[2)something else]")
     search_choice3_stoneprisoncell = input()
-    if search_choice3_stoneprisoncell.lower() == "bed" or "1":
+    if search_choice3_stoneprisoncell.lower() in ["bed","1"]:
         print("[You search through the bed again but still find nothing.]")
         time.sleep(3)
         print("[Would you like to search the bed again or do something else?]")
-        print("[Choices:]\n[1)bed again]\n[2)something else]")
+        print("[Choices:]\n[1)something else]\n[2)bed again]")
         search_choice4_stoneprisoncell = input()
-        if search_choice4_stoneprisoncell.lower() == "something else" or "2":
+        if search_choice4_stoneprisoncell.lower() in ["something else","1"]:
             Choice_Something_Else()
-        if search_choice4_stoneprisoncell.lower() == "bed again" or "1":
+        if search_choice4_stoneprisoncell.lower() in ["bed again","2"]:
             print("[This time you decide to search the bottom of the bed but unfortunetly still didn't manage to find anything]")
             time.sleep(4)
             print("[Would you like to search the bed again or do something else?]")
             print("[Choices:]\n[1)bed one more time]\n[2)something else]")
             search_choice5_stoneprisoncell = input()
-            if search_choice5_stoneprisoncell.lower() == "bed one more time" or "1":
+            if search_choice5_stoneprisoncell.lower() in ["bed one more time","1"]:
                 print("[This time, you decide to stick your hand underneath the bed to feel around for something.]")
                 time.sleep(4)
                 print("[As you stick your hand further under the bed and move it around, you fortunately managed to feel a wooden box near the corner]")
@@ -64,7 +66,7 @@ def Choice_Something_Else():
                 print("[Now what would you like to do]")
                 print("[Choices:]\n[1)learn the cultivation manual(learn)]\n[2)something else]")
                 major_decision1 = input()
-                if major_decision1.lower() == "learn" or "1":
+                if major_decision1.lower() in ["learn","1"]:
                     print("[You open the manual and read the lines:]")
                     time.sleep(1)
                     print("'I am all but all is I, everywhere but nowhere, I am the 5 elements as they are me, and through their balance, Yin and Yang become balanced and I become the universe as it becomes one with me. For I am all and all is me.' You chant the chant on the first page of the manual with your eyes closed, focusing on it.")
@@ -89,7 +91,7 @@ def Choice_Something_Else():
                     print("What would you like to do now?")
                     print("[Choices:]\n[1) read more of the book]\n[2)something else]")
                     major_decision2 = input()
-                    if major_decision2.lower() == "read more of the book" or "1":
+                    if major_decision2.lower() in ["read more of the book","1"]:
                         print("[You try to read the second page of the book but you get hit with a painful headache as you read through it.]")
                         print("hint: Maybe increasing your cultivation realm or level may allow you to comprehend more of the book]")
                         time.sleep(3)
@@ -97,15 +99,15 @@ def Choice_Something_Else():
                         print("What would you like to do instead?")
                         print("[Choices:]\n[1)something else]")
                         major_decision3 = input()
-                        if major_decision3.lower() == "something else" or "1":
+                        if major_decision3.lower() in ["something else" or "1"]:
                             Choice_Something_Else()
-                    if major_decision2.lower() == "something else" or "2":
+                    if major_decision2.lower() in ["something else" or "2"]:
                         Choice_Something_Else()
-                if major_decision1.lower() == "something else" or "2":
+                if major_decision1.lower() in ["something else" or "2"]:
                     Choice_Something_Else()
-        if search_choice5_stoneprisoncell.lower() == "something else" or "2":
+        if search_choice5_stoneprisoncell.lower() in ["something else" or "2"]:
             Choice_Something_Else()
-    if search_choice3_stoneprisoncell.lower() == "something else" or "2":
+    if search_choice3_stoneprisoncell.lower() in ["something else" or "2"]:
         Choice_Something_Else()
 
 def ScenarioPrep1_1():
@@ -119,11 +121,11 @@ def ScenarioPrep1_1():
     print("hint: This may provide you with a link to your past if used correctly")
     print("[Choices:]\n[1)yes]\n[2)no]")
     pickup_pendant_1 = input()
-    if pickup_pendant_1.lower() == "yes" or "1":
+    if pickup_pendant_1.lower() in ["yes" or "1"]:
         print("[You decide to pick up the pendant and wear it around your neck]")
         possessed_items.append("jade butterfly pendant")
         mc.past_clues = mc.past_clues.append("jade butterfly pendant")
-    if pickup_pendant_1.lower() == "no" or "2":
+    if pickup_pendant_1.lower() in ["no" or "2"]:
         print("[You decide to throw away the pendant thinking its probably nothing much.]") 
         time.sleep(2)
         print("[As you throw it away on the ground, it shatters and reveals a small key in it.]")
@@ -135,9 +137,9 @@ def ScenarioPrep1_1():
     print("[Would you like to search the bed or do something else?]")
     print("[Choices:]\n[1)bed]\n[2)something else]")
     search_choice2_stoneprisoncell = input()
-    if search_choice2_stoneprisoncell.lower() == "bed" or "1":
+    if search_choice2_stoneprisoncell.lower() in ["bed" or "1"]:
         ScenarioPrep1()
-    if search_choice2_stoneprisoncell.lower() == "something else" or "2":
+    if search_choice2_stoneprisoncell.lower() in ["something else" or "2"]:
         Choice_Something_Else()
 if __name__ == "__main__":
     while True:
@@ -169,7 +171,7 @@ if __name__ == "__main__":
         time.sleep(3)
         print("[You look around your surroundings confused as you realize that you're in some strange prison cell.]")
         time.sleep(3)
-        print("[The walls are made of rock as if someone carved a room into a mountain. There's an old and worn out bed in the corner.]")
+        print("[The walls are made of rock as if your underground somewhere. There's an old and worn out bed in the corner.]")
         time.sleep(4)
         print("[As you try to recall the confusing dream you had, you realize a disturbing fact. You have no clue who you are!]")
         time.sleep(4)
@@ -184,9 +186,9 @@ if __name__ == "__main__":
         search_choice1_stoneprisoncell = input()
         possessed_items = []
         mc = MainCharacter()
-        if search_choice1_stoneprisoncell.lower() == "bed" or "1":
+        if search_choice1_stoneprisoncell.lower() in ["bed","1"]:
             ScenarioPrep1()
-        if search_choice1_stoneprisoncell.lower() == "yourself" or "2":
+        if search_choice1_stoneprisoncell.lower() in ["yourself","2"]:
             ScenarioPrep1_1()
 
-            #ASk HIM ABOUT THIS PROBLEM ABOUT WRONG PATHS
+        
