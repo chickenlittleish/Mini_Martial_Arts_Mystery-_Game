@@ -8,10 +8,10 @@ class MainCharacter():
         self.strength = 6
         self.dexterity = 8
         self.stealth = 4
-        self.cultivation_realm = 0
+        self.cultivation_realm = None
         self.cultivation_realm_level = 0
         self.past_clues = []
-        
+
 
 def MainStory1():
     print("[You decide to stick your head outside of your cell and look around.]")
@@ -78,8 +78,8 @@ def ScenarioPrep1():
                     mc.strength = mc.strength + 5
                     mc.dexterity = mc.dexterity + 6
                     mc.stealth = mc.stealth + 11
-                    mc.cultivation_realm = mc.cultivation_realm + 1
-                    mc.cultivation_realm_level = "Qi Qathering Realm"
+                    mc.cultivation_realm == "Qi Gathering Realm"
+                    mc.cultivation_realm_level = mc.cultivation_realm_level + 1
                     print("Current Stats]:")
                     print("Vitality: " ,(mc.health))
                     print("Strength: " ,(mc.strength))
@@ -193,3 +193,7 @@ if __name__ == "__main__":
             ScenarioPrep1_1()
 
         
+
+
+#ASK HIM HOW TO ENCORPORATE LIST FOR CULTIVATION REALMS
+#ASK HIM HOW TO FIX PROBLEM WITH CULTIVATION REALMS
