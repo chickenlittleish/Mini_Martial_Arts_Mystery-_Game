@@ -8,9 +8,10 @@ class MainCharacter():
         self.strength = 6
         self.dexterity = 8
         self.stealth = 4
-        self.cultivation_realm = None
+        self.cultivation_realm = 0
         self.cultivation_realm_level = 0
         self.past_clues = []
+        
 
 def MainStory1():
     print("[You decide to stick your head outside of your cell and look around.]")
