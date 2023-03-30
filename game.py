@@ -17,8 +17,9 @@ def MainStory1():
     print("[You decide to stick your head outside of your cell and look around.]")
     time.sleep(3)
     print("A wild Russian Bear appears and bites your head off")
-    print("Death")
     time.sleep(4)
+    print("Death")
+    sys.exit()
 
 def Choice_Something_Else():
     print("[What would you like to do?]")
