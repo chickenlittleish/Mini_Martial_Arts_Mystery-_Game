@@ -8,7 +8,7 @@ class MainCharacter():
         self.strength = 6
         self.dexterity = 8
         self.stealth = 4
-        self.cultivation_realm = cultivation
+        self.cultivation_realm = None
         self.cultivation_realm_level = 0
         self.past_clues = []
 
@@ -79,7 +79,7 @@ def ScenarioPrep1():
                     mc.strength = mc.strength + 5
                     mc.dexterity = mc.dexterity + 6
                     mc.stealth = mc.stealth + 11
-                    cultivation == "Qi Gathering Realm"
+                    mc.cultivation_realm = "Qi Gathering Realm"
                     mc.cultivation_realm_level = mc.cultivation_realm_level + 1
                     print("[Current Stats]:")
                     print("Vitality: " ,(mc.health))
