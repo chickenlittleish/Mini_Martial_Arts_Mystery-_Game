@@ -8,7 +8,7 @@ class MainCharacter():
         self.strength = 6
         self.dexterity = 8
         self.stealth = 4
-        self.cultivation_realm = None
+        self.cultivation_realm = cultivation
         self.cultivation_realm_level = 0
         self.past_clues = []
 
@@ -79,9 +79,9 @@ def ScenarioPrep1():
                     mc.strength = mc.strength + 5
                     mc.dexterity = mc.dexterity + 6
                     mc.stealth = mc.stealth + 11
-                    mc.cultivation_realm == "Qi Gathering Realm"
+                    cultivation == "Qi Gathering Realm"
                     mc.cultivation_realm_level = mc.cultivation_realm_level + 1
-                    print("Current Stats]:")
+                    print("[Current Stats]:")
                     print("Vitality: " ,(mc.health))
                     print("Strength: " ,(mc.strength))
                     print("Dexterity: " ,(mc.dexterity))
@@ -101,15 +101,15 @@ def ScenarioPrep1():
                         print("What would you like to do instead?")
                         print("[Choices:]\n[1)something else]")
                         major_decision3 = input()
-                        if major_decision3.lower() in ["something else" or "1"]:
+                        if major_decision3.lower() in ["something else","1"]:
                             Choice_Something_Else()
-                    if major_decision2.lower() in ["something else" or "2"]:
+                    if major_decision2.lower() in ["something else","2"]:
                         Choice_Something_Else()
-                if major_decision1.lower() in ["something else" or "2"]:
+                if major_decision1.lower() in ["something else","2"]:
                     Choice_Something_Else()
-        if search_choice5_stoneprisoncell.lower() in ["something else" or "2"]:
+        if search_choice5_stoneprisoncell.lower() in ["something else","2"]:
             Choice_Something_Else()
-    if search_choice3_stoneprisoncell.lower() in ["something else" or "2"]:
+    if search_choice3_stoneprisoncell.lower() in ["something else","2"]:
         Choice_Something_Else()
 
 def ScenarioPrep1_1():
@@ -123,11 +123,11 @@ def ScenarioPrep1_1():
     print("hint: This may provide you with a link to your past if used correctly")
     print("[Choices:]\n[1)yes]\n[2)no]")
     pickup_pendant_1 = input()
-    if pickup_pendant_1.lower() in ["yes" or "1"]:
+    if pickup_pendant_1.lower() in ["yes","1"]:
         print("[You decide to pick up the pendant and wear it around your neck]")
         possessed_items.append("jade butterfly pendant")
         mc.past_clues = mc.past_clues.append("jade butterfly pendant")
-    if pickup_pendant_1.lower() in ["no" or "2"]:
+    if pickup_pendant_1.lower() in ["no","2"]:
         print("[You decide to throw away the pendant thinking its probably nothing much.]") 
         time.sleep(2)
         print("[As you throw it away on the ground, it shatters and reveals a small key in it.]")
@@ -139,9 +139,9 @@ def ScenarioPrep1_1():
     print("[Would you like to search the bed or do something else?]")
     print("[Choices:]\n[1)bed]\n[2)something else]")
     search_choice2_stoneprisoncell = input()
-    if search_choice2_stoneprisoncell.lower() in ["bed" or "1"]:
+    if search_choice2_stoneprisoncell.lower() in ["bed","1"]:
         ScenarioPrep1()
-    if search_choice2_stoneprisoncell.lower() in ["something else" or "2"]:
+    if search_choice2_stoneprisoncell.lower() in ["something else","2"]:
         Choice_Something_Else()
 if __name__ == "__main__":
     while True:
@@ -192,9 +192,3 @@ if __name__ == "__main__":
             ScenarioPrep1()
         if search_choice1_stoneprisoncell.lower() in ["yourself","2"]:
             ScenarioPrep1_1()
-
-        
-
-
-#ASK HIM HOW TO ENCORPORATE LIST FOR CULTIVATION REALMS
-#ASK HIM HOW TO FIX PROBLEM WITH CULTIVATION REALMS
