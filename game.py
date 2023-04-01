@@ -144,9 +144,9 @@ def pendant():
     print("hint: This may provide you with a link to your past if used correctly")
     print("[Choices:]\n[1)yes]\n[2)no]")
     pickup_pendant_1 = input()
+    ScenarioPrep1_1(pickup_pendant_1)
 
 def ScenarioPrep1_1(pickup_pendant_1):
-    pendant()
     if pickup_pendant_1.lower() in ["yes","1"]:
         print("[You decide to pick up the pendant and wear it around your neck]")
         inventory.append("jade butterfly pendant")
@@ -156,10 +156,20 @@ def ScenarioPrep1_1(pickup_pendant_1):
         time.sleep(2)
         print("[As you throw it away on the ground, it shatters and reveals a small key in it.]")
         time.sleep(3)
-        print("[You pick it up and place it in your pocket]")
+        print("[You pick it up and decide to bite the key to make sure its real and not one of those fake chocolate keys you saw on Youtube like 60 years ago.]")
+        time.sleep(6)
+        print("[How many times would you like to bite the key?]")
+        bite = input()
+        time.sleep(2)
+        bite_counter = 0
+        #for bite_counter in bite:
+         #   print("[You bit the key " +bite_counter+ " times]")
+          #  time.sleep(2)
+           # bite_counter + 1
+        print("[After biting the key " +bite+ " times, you finally confirm it isn't chocolate and place it in your pocket")
         inventory.append("small mysterious key")
         mc.past_clues = mc.past_clues.append("small mysterious key")
-        time.sleep(1)
+        time.sleep(5)
     print("[Would you like to search the bed or do something else?]")
     print("[Choices:]\n[1)bed]\n[2)something else]")
     search_choice2_stoneprisoncell = input()
@@ -167,6 +177,7 @@ def ScenarioPrep1_1(pickup_pendant_1):
         ScenarioPrep1()
     if search_choice2_stoneprisoncell.lower() in ["something else","2"]:
         Choice_Something_Else()
+
 if __name__ == "__main__":
     while True:
         print("'You must live no matter what, ∆µœåøŒ◊, as the successor of the--' A strange woman said as she bled out")
@@ -215,4 +226,4 @@ if __name__ == "__main__":
         if search_choice1_stoneprisoncell.lower() in ["bed","1"]:
             ScenarioPrep1()
         if search_choice1_stoneprisoncell.lower() in ["yourself","2"]:
-            ScenarioPrep1_1()
+            pendant()
