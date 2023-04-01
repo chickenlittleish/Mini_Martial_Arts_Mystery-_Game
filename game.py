@@ -161,11 +161,8 @@ def ScenarioPrep1_1(pickup_pendant_1):
         print("[How many times would you like to bite the key?]")
         bite = input()
         time.sleep(2)
-        bite_counter = 0
-        #for bite_counter in bite:
-         #   print("[You bit the key " +bite_counter+ " times]")
-          #  time.sleep(2)
-           # bite_counter + 1
+        for bite_counter in bite:
+            print("[You bit the key]")
         print("[After biting the key " +bite+ " times, you finally confirm it isn't chocolate and place it in your pocket")
         inventory.append("small mysterious key")
         mc.past_clues = mc.past_clues.append("small mysterious key")
