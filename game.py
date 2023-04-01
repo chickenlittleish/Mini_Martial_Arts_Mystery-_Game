@@ -232,4 +232,4 @@ if __name__ == "__main__":
             pendant()
 
 
-#Ask Bowman to fix the for loop that starts at 0
+#Ask Bowman to fix the for loop that starts at 0 not 1
