@@ -160,9 +160,15 @@ def ScenarioPrep1_1(pickup_pendant_1):
         time.sleep(6)
         print("[How many times would you like to bite the key?]")
         bite = input()
+        bite = int(bite)
+        bite = bite + 1
         time.sleep(2)
-        for bite_counter in bite:
-            print("[You bit the key]")
+        for bite_counter in range(bite):
+            bite_counter = str(bite_counter)
+            print("[You bit the key " +bite_counter+ " times]")
+            bite_counter = int(bite_counter)
+        bite = bite - 1
+        bite = str(bite)
         print("[After biting the key " +bite+ " times, you finally confirm it isn't chocolate and place it in your pocket")
         inventory.append("small mysterious key")
         mc.past_clues = mc.past_clues.append("small mysterious key")
@@ -224,3 +230,6 @@ if __name__ == "__main__":
             ScenarioPrep1()
         if search_choice1_stoneprisoncell.lower() in ["yourself","2"]:
             pendant()
+
+
+#Ask Bowman to fix the for loop that starts at 0
