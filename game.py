@@ -3,7 +3,7 @@ import time
 
 class MainCharacter():
     def __init__(self):
-        self.items = possessed_items
+        self.items = inventory
         self.health = 100
         self.strength = 6
         self.dexterity = 8
@@ -20,7 +20,7 @@ def MainStory1():
     time.sleep(6)
     print("[A key is required to proceed]")
     time.sleep(1)
-    if 'small mysterious key' in possessed_items:
+    if 'small mysterious key' in inventory:
         print("[You pull out the small key from your pocket and place it in a lock to see if it fits and surprisingly it fits and works!]")
         time.sleep(5)
         print("(Wait what? Why does the key I found in the butterfly pendant open the prison cell's lock? What's going on?)")
@@ -86,7 +86,7 @@ def ScenarioPrep1():
                 print("[Inside you manage to find a book that seems like a martial arts manual and as you look aat the cover, it says:]")
                 time.sleep(3)
                 print("['Universal Harmonic Technique']")
-                possessed_items.append("universal harmonic martial arts manual")
+                inventory.append("universal harmonic martial arts manual")
                 print("[Now what would you like to do]")
                 print("[Choices:]\n[1)learn the cultivation manual(learn)]\n[2)something else]")
                 major_decision1 = input()
@@ -119,7 +119,6 @@ def ScenarioPrep1():
                         print("[You try to read the second page of the book but you get hit with a painful headache as you read through it.]")
                         print("hint: Maybe increasing your cultivation realm or level may allow you to comprehend more of the book]")
                         time.sleep(3)
-
                         print("What would you like to do instead?")
                         print("[Choices:]\n[1)something else]")
                         major_decision3 = input()
@@ -134,7 +133,7 @@ def ScenarioPrep1():
     if search_choice3_stoneprisoncell.lower() in ["something else","2"]:
         Choice_Something_Else()
 
-def ScenarioPrep1_1():
+def pendant():
     print("[You search your clothes and body for a book or anything that can tell you about your past]")
     time.sleep(4)
     print("[You thought your search was useless until you put your hand in your pockets and found something]")
@@ -145,9 +144,12 @@ def ScenarioPrep1_1():
     print("hint: This may provide you with a link to your past if used correctly")
     print("[Choices:]\n[1)yes]\n[2)no]")
     pickup_pendant_1 = input()
+
+def ScenarioPrep1_1(pickup_pendant_1):
+    pendant()
     if pickup_pendant_1.lower() in ["yes","1"]:
         print("[You decide to pick up the pendant and wear it around your neck]")
-        possessed_items.append("jade butterfly pendant")
+        inventory.append("jade butterfly pendant")
         mc.past_clues = mc.past_clues.append("jade butterfly pendant")
     if pickup_pendant_1.lower() in ["no","2"]:
         print("[You decide to throw away the pendant thinking its probably nothing much.]") 
@@ -155,7 +157,7 @@ def ScenarioPrep1_1():
         print("[As you throw it away on the ground, it shatters and reveals a small key in it.]")
         time.sleep(3)
         print("[You pick it up and place it in your pocket]")
-        possessed_items.append("small mysterious key")
+        inventory.append("small mysterious key")
         mc.past_clues = mc.past_clues.append("small mysterious key")
         time.sleep(1)
     print("[Would you like to search the bed or do something else?]")
@@ -208,7 +210,7 @@ if __name__ == "__main__":
         print("[Where are you going to search for the book?]")
         print("[Choices:]\n[1)bed]\n[2)yourself]")
         search_choice1_stoneprisoncell = input()
-        possessed_items = []
+        inventory = []
         mc = MainCharacter()
         if search_choice1_stoneprisoncell.lower() in ["bed","1"]:
             ScenarioPrep1()
