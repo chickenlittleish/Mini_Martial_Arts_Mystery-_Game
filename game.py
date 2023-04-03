@@ -16,7 +16,7 @@ class MainCharacter():
 def MainStory1():
     print("[You decide to stick your head outside of your cell and look around.]")
     time.sleep(2)
-    print("[When you try to push on the cell, it doesn't budge an inch. It's sealed shut. As you look around the cell, you find a lock on th side of the cell.]")
+    print("[When you try to push on the cell, it doesn't budge an inch. It's sealed shut. As you look around the cell, you find a lock on the side of the cell.]")
     time.sleep(6)
     print("[A key is required to proceed]")
     time.sleep(1)
@@ -117,7 +117,8 @@ def ScenarioPrep1():
                     major_decision2 = input()
                     if major_decision2.lower() in ["read more of the book","1"]:
                         print("[You try to read the second page of the book but you get hit with a painful headache as you read through it.]")
-                        print("hint: Maybe increasing your cultivation realm or level may allow you to comprehend more of the book]")
+                        time.sleep(4)
+                        print("[hint: Maybe increasing your cultivation realm or level may allow you to comprehend more of the book]")
                         time.sleep(3)
                         print("What would you like to do instead?")
                         print("[Choices:]\n[1)something else]")
@@ -141,7 +142,7 @@ def pendant():
     print("[You managed to find a pendant with a jade butterfly attached to it.]")
     time.sleep(3)
     print("[Would you like to pick it up or not?]")
-    print("hint: This may provide you with a link to your past if used correctly")
+    print("[hint: This may provide you with a link to your past if used correctly]")
     print("[Choices:]\n[1)yes]\n[2)no]")
     pickup_pendant_1 = input()
     ScenarioPrep1_1(pickup_pendant_1)
@@ -161,13 +162,12 @@ def ScenarioPrep1_1(pickup_pendant_1):
         print("[How many times would you like to bite the key?]")
         bite = input()
         bite = int(bite)
-        bite = bite + 1
         time.sleep(2)
         for bite_counter in range(bite):
             bite_counter = str(bite_counter)
             print("[You bit the key " +bite_counter+ " times]")
             bite_counter = int(bite_counter)
-        bite = bite - 1
+            time.sleep(1)
         bite = str(bite)
         print("[After biting the key " +bite+ " times, you finally confirm it isn't chocolate and place it in your pocket")
         inventory.append("small mysterious key")
