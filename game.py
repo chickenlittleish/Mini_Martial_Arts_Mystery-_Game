@@ -163,7 +163,8 @@ def ScenarioPrep1_1(pickup_pendant_1):
         bite = input()
         bite = int(bite)
         time.sleep(2)
-        for bite_counter in range(bite):
+        bite_counter = 1
+        for bite_counter in range(bite_counter, bite + 1):
             bite_counter = str(bite_counter)
             print("[You bit the key " +bite_counter+ " times]")
             bite_counter = int(bite_counter)
